@@ -14,6 +14,7 @@ Follow-ups:
 • Why did you choose this architecture?
 
 Q2. What exactly do you do in AWS cloud in this project?
+
 Follow-ups:
 • Do you manage VPC/subnets/security groups?
 • Do you create EC2/EKS/ECS resources?
@@ -23,6 +24,7 @@ Follow-ups:
 
 <h2>Container & Kubernetes Questions  </h2> 
 Q1. On which compute platform are the applications hosted?
+
 Follow-ups:
 • Why EKS over ECS?
 • How do you manage worker nodes?
@@ -30,6 +32,7 @@ Follow-ups:
 • Do you use Cluster Autoscaler / Karpenter?
 
 Q2. Have you created a kubernetes cluster & EKS cluster? Explain the process.
+
 Follow-ups:
 • Did you use console, CLI, or Terraform?
 • Which VPC/subnet configuration did you use?
@@ -37,6 +40,7 @@ Follow-ups:
 • How do you bootstrap kubectl access?
 
 Q3. Have you upgraded an EKS cluster before? How?
+
 Follow-ups:
 • What risks come with upgrading?
 • How do you handle node draining?
@@ -44,6 +48,7 @@ Follow-ups:
 • What checks do you perform post-upgrade?
 
 Q4. If your teammate also wants access to the same cluster through kubectl, what steps do you follow?
+
 Follow-ups:
 • What IAM policy do you attach?
 • What is aws-auth ConfigMap?
@@ -53,11 +58,13 @@ Follow-ups:
 
 Q5. In which Kubernetes resource do you map IAM users/roles?
 → AWS Auth ConfigMap
+
 Follow-ups:
 • What sections inside it? (mapUsers, mapRoles)
 • What mistakes can break authentication?
 
 Q6. Have you worked with Helm and Helm Charts?
+
 Follow-ups:
 • Why use Helm instead of plain YAML?
 • Show the folder structure of a Helm chart.
@@ -66,6 +73,7 @@ Follow-ups:
 • How do you manage multiple environments?
 
 Q7. How do you securely inject sensitive data into Helm?
+
 Follow-ups:
 • Do you use AWS Secrets Manager?
 • Do you avoid committing secrets in values.yaml?
@@ -73,6 +81,7 @@ Follow-ups:
 • What is the purpose of –set and –set-file flags?
 
 Q8. Can a public Helm chart be customized?
+
 Follow-ups:
 • Why is it not recommended to edit the chart directly?
 • How do you update config safely?
@@ -80,12 +89,14 @@ Follow-ups:
 • How do you extend a chart with new templates?
 
 Q9. How do you add extra Kubernetes manifest files to a public Helm chart?
+
 Follow-ups:
 • Where do you put extra YAML files? (templates folder)
 • How do you reference new values?
 • Can this break the original chart?
 
 Q10. How to implement shared storage across multiple pods running on multiple nodes in EKS?
+
 Follow-ups:
 • Why EFS over EBS?
 • What is the EFS CSI driver?
@@ -93,18 +104,21 @@ Follow-ups:
 • How do you mount PVC in deployment?
 
 Q11. If there is one node but multiple pods, can we use EBS for shared storage?
+
 Follow-ups:
 • What access mode does EBS support? (RWO)
 • Why can’t EBS work across multiple nodes?
 • When is EFS mandatory?
 
 Q12. What is a Pod Disruption Budget (PDB)?
+
 Follow-ups:
 • What is voluntary disruption?
 • What is involuntary disruption?
 • When do we use minAvailable vs maxUnavailable?
 
 Q13. What is your approach to debug a CrashLoopBackOff?
+
 Follow-ups:
 • What logs do you check?
 • How do you check events?
@@ -113,6 +127,7 @@ Follow-ups:
 • How do you inspect environment variables and config maps?
 
 Q14. During peak traffic (2 hours/day), ingress controller is routing requests slowly. How do you debug it?
+
 Follow-ups:
 • Check ingress controller logs?
 • Check CPU/memory usage?
@@ -124,6 +139,7 @@ Follow-ups:
 • Is target response latency high?
 
 Q15. Should we increase ingress controller replicas permanently or dynamically?
+
 Follow-ups:
 • Why is static scaling bad?
 • When to use HPA?
@@ -131,12 +147,14 @@ Follow-ups:
 
 
 Q16. Why choose EFS over EBS?
+
 Follow-ups:
 • Which one supports multi-node?
 • Which one is cheaper?
 • Which one is faster?
 
 Q17. Can EBS be attached to multiple nodes? Why not?
+
 Follow-ups:
 • Explain RWO vs RWX
 • Who enforces the mount restriction?
@@ -145,6 +163,7 @@ Follow-ups:
 <h2> CI/CD Questions </h2>
 
 Q1. What CI/CD tools have you worked with?
+
 Follow-ups:
 • Explain your GitHub Actions pipeline.
 • How do you run iOS build automation?
@@ -152,12 +171,14 @@ Follow-ups:
 • How do you deploy to EKS through GitHub Actions?
 
 Q2. How do you handle multi-environment pipelines?
+
 Follow-ups:
 • Dev → QA → Prod
 • Promotion strategy (manual approvals?)
 • Git branching strategy?
 
 Q3. How do you implement rolling deployments?
+
 Follow-ups:
 • What happens to old pods?
 • What is maxSurge, maxUnavailable?
@@ -165,6 +186,7 @@ Follow-ups:
 <h2>  Terraform Questions </h2>
 
 Q1. Have you used Terraform?
+
 Follow-ups:
 • Show module structure.
 • Show provider file.
