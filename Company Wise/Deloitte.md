@@ -15,3 +15,14 @@
 13. How does Argo CD detect and handle configuration drift between Git and the cluster?,
 14. What is “Sync” in Argo CD, and when is it triggered?,
 15. What is “Prune” in Argo CD, and why is it important in GitOps workflows?
+
+<h1> ROUND 2</h1>
+
+1. Can you tell me what’s your strongest skills when it comes to Devops and sre ?
+2. What is multibranch pipeline and what did you achieve by implementing that?
+3. What is the need of SRE ?
+4. What does SRE have knowledge on Devops?
+5. How were you handling deployments for various environments?
+6. How soon can you join our organisation?
+7. What’s your current and expected package?
+8. Why would you want to join our organisation?
